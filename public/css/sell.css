@@ -1,0 +1,34 @@
+.sell_main {
+  margin-top: 50px;
+}
+
+.sell_main .media img {
+  border: 2px solid grey;
+  margin: 0px;
+}
+
+.sell_main .choose_image img {
+  margin-left: 0px;
+  padding: 0px;
+}
+
+.row {
+  width: 100%;
+}
+
+@media (max-width: 454px) {
+  .sell_main {
+    padding: 0px;
+    margin: 10px 0px;
+  }
+
+  .submit {
+    margin-right: 100px;
+  }
+
+  .sell_main {
+    font-size: 0.9em;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlc291cmNlcy9hc3NldHMvc2Fzcy9zZWxsLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiXHJcblx0LnNlbGxfbWFpbntcclxuXHRcdC8vIGJhY2tncm91bmQ6ICNmZmY7XHJcblx0XHQvLyBib3JkZXI6IDJweCBzb2xpZCBncmV5O1xyXG5cdFx0Ly8gYm9yZGVyLXJhZGl1czogMTBweDtcclxuXHRcdC8vIHBhZGRpbmc6IDIwcHg7XHJcblx0XHRtYXJnaW4tdG9wOiA1MHB4O1xyXG5cdH1cclxuXHJcblx0LnNlbGxfbWFpbiAubWVkaWEgaW1ne1xyXG5cdFx0Ym9yZGVyOiAycHggc29saWQgZ3JleTtcclxuXHRcdG1hcmdpbjogMHB4O1xyXG5cdH1cclxuXHJcblx0LnNlbGxfbWFpbiAuY2hvb3NlX2ltYWdlIGltZ3tcclxuXHRcdG1hcmdpbi1sZWZ0OiAwcHg7XHJcblx0XHRwYWRkaW5nOiAwcHg7XHJcblx0fVxyXG5cclxuXHQucm93e1xyXG5cdFx0d2lkdGg6IDEwMCU7XHJcblx0fVxyXG5cclxuLy8gbWVkaWEgcXVlcmllc1xyXG5cclxuQG1lZGlhIChtYXgtd2lkdGg6IDQ1NHB4KXtcclxuXHQuc2VsbF9tYWlue1xyXG5cdFx0cGFkZGluZzogMHB4O1xyXG5cdFx0bWFyZ2luOiAxMHB4IDBweDtcclxuXHR9XHJcblxyXG5cdC5zdWJtaXR7XHJcblx0XHRtYXJnaW4tcmlnaHQ6IDEwMHB4O1xyXG5cdH1cclxuXHJcblx0LnNlbGxfbWFpbntcclxuXHRcdGZvbnQtc2l6ZTogMC45ZW07XHJcblx0fVxyXG59Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNDLEFBQUEsVUFBVSxDQUFBO0VBS1QsVUFBVSxFQUFFLElBQUk7Q0FDaEI7O0FBRUQsQUFBa0IsVUFBUixDQUFDLE1BQU0sQ0FBQyxHQUFHLENBQUE7RUFDcEIsTUFBTSxFQUFFLGNBQWM7RUFDdEIsTUFBTSxFQUFFLEdBQUc7Q0FDWDs7QUFFRCxBQUF5QixVQUFmLENBQUMsYUFBYSxDQUFDLEdBQUcsQ0FBQTtFQUMzQixXQUFXLEVBQUUsR0FBRztFQUNoQixPQUFPLEVBQUUsR0FBRztDQUNaOztBQUVELEFBQUEsSUFBSSxDQUFBO0VBQ0gsS0FBSyxFQUFFLElBQUk7Q0FDWDs7QUFJRixNQUFNLEVBQUUsU0FBUyxFQUFFLEtBQUs7RUFDdkIsQUFBQSxVQUFVLENBQUE7SUFDVCxPQUFPLEVBQUUsR0FBRztJQUNaLE1BQU0sRUFBRSxRQUFRO0dBQ2hCO0VBRUQsQUFBQSxPQUFPLENBQUE7SUFDTixZQUFZLEVBQUUsS0FBSztHQUNuQjtFQUVELEFBQUEsVUFBVSxDQUFBO0lBQ1QsU0FBUyxFQUFFLEtBQUs7R0FDaEIifQ== */

@@ -1,0 +1,144 @@
+	.header{
+		background: rgb(44,79,108);
+		background: #375F5F;
+		-webkit-box-shadow: 0 1px 5px  #000000;
+        -moz-box-shadow: 0 1px 5px  #000000;
+        box-shadow: 0 1px 5px  #000000;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100px;
+		position: fixed;
+		z-index: 100;
+	  -webkit-transition: -webkit-transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+	  -moz-transition: -moz-transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+	  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+	  // transition: all 0.5s;
+	}
+
+
+	.nav_small{
+		display: none;
+	}
+
+	.mainNav a{
+		text-decoration: none;
+		color: #fff;
+		padding: 15px;
+		font: 1.2em sans-serif;
+	}
+
+	.mainNav{
+	  list-style-type: none;
+	  // display: flex;
+	  position: absolute;
+	  bottom: 0;
+	  right: 0;
+	}
+
+	.mainNav li{
+		display: inline;
+	}
+
+	.header img{
+		border-radius: 100%;
+		transition: .5s ease-in;
+	}
+
+	.header img:hover{
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+
+	@media (max-width: 600px){
+		.main_nav img{
+			width: 70px;
+			height: 70px;
+		    position:absolute;
+		    bottom: 0;
+		}
+
+		.header{
+			height: 70px;
+		}
+		.mainNav a{
+			font-size: 0.8em;
+			padding: 7px;
+		}
+
+		.mainNav{
+            text-align: center;
+		}
+        
+        .mainNav{
+            font-size: 1em;
+            text-align: center
+        }
+
+	}
+
+	@media (max-width: 410px){
+		.main_nav img{
+			width: 70px;
+			height: 70px;
+		    position:absolute;
+		    right:0;
+		    top:0;
+		    left: 0;
+		    bottom: 0;
+		    margin:auto;
+		    padding: 0px;
+		    margin-bottom:0px;
+			position: absolute;
+			margin-top: -10px;
+		}
+
+		.mainNav{
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			margin: auto;
+			padding: 0px;
+			margin-bottom: 0px;
+		}
+
+		.mainNav a{
+			margin-bottom: -10px;
+			font-size: 0.8em;
+			padding-bottom: 0px;
+			text-align: center;
+		}
+
+
+	}
+
+	@media (max-width: 300px){
+		.mainNav a{
+			font-size: 0.8em;
+			padding: 4px;
+		}
+
+		.mainNav{
+			padding: auto 0px;
+			margin: auto 0px;
+			overflow: hidden;
+		}
+	}
+
+	@media (max-width: 230px){
+		.header{
+			display: none;
+		}
+		.nav_small{
+			display: block;
+		}
+	}
+
+
+.header.scrollUp {
+  transform: translateY(-100px);
+  -o-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  -moz-transform: translateY(-100px);
+}

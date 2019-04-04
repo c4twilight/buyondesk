@@ -1,0 +1,39 @@
+
+	.sell_main{
+		// background: #fff;
+		// border: 2px solid grey;
+		// border-radius: 10px;
+		// padding: 20px;
+		margin-top: 50px;
+	}
+
+	.sell_main .media img{
+		border: 2px solid grey;
+		margin: 0px;
+	}
+
+	.sell_main .choose_image img{
+		margin-left: 0px;
+		padding: 0px;
+	}
+
+	.row{
+		width: 100%;
+	}
+
+// media queries
+
+@media (max-width: 454px){
+	.sell_main{
+		padding: 0px;
+		margin: 10px 0px;
+	}
+
+	.submit{
+		margin-right: 100px;
+	}
+
+	.sell_main{
+		font-size: 0.9em;
+	}
+}

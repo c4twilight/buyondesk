@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Mail;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Mail\Mailable;
+use Illuminate\Queue\SerializesModels;
+
+class contactInformation extends Mailable {
+	use Queueable, SerializesModels;
+	public $seller_name;
+	public $user_name;
+	public $contact_no;
+	public $message;
+
+	/**
+	 * Create a new message instance.
+	 *
+	 * @return void
+	 */
+	public function __construct(array $array) {
+		$this->seller_name = $array[0];
+		$this->user_name = $array[1];
+		if (isset($array[2])) {
+			$this->contact_no = $array[2];
+		}
+		if (isset($array[3])) {
+			$this->message = $array[3];
+		}
+
+	}
+
+	/**
+	 * Build the message.
+	 *
+	 * @return $this
+	 */
+	public function build() {
+		return $this->markdown('email.contactinformation')->subject('Your posted item on mridul.com');
+	}
+}

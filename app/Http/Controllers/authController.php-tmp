@@ -1,0 +1,49 @@
+<?php
+
+namespace App\Http\Controllers;
+use App\sell;
+use App\User;
+
+class authController extends Controller {
+
+	public function __construct() {
+		$this->middleware('guest', ['except' => ['logout', 'user']]);
+	}
+
+	public function signup() {
+		$this->validate(request(), [
+				'name'         => 'required',
+				'email'        => 'required',
+				'password'     => 'required|min:6|confirmed',
+				'college_name' => 'required',
+				'checkbox'     => 'accepted',
+			], [
+				'checkbox.accepted' => 'Please agree to terms and conditions if want to proceed',
+			]);
+
+		User::register();
+
+		return redirect()->home();
+	}
+
+	public function logout() {
+		auth()->logout();
+		return redirect()->home();
+	}
+
+	public function login() {
+		if (!auth()       ->attempt(request(['email', 'password']))) {
+			return redirect()->home()->withErrors([
+					'message' => 'Invalid Login ID Or Password',
+				]);
+		}
+
+		return redirect()->home();
+	}
+
+	public function user() {
+		// $userSells = auth()->user()->sells;
+		$userSells = sell::where('user_id', auth()->user()->id)->paginate(1);
+		return view('user', compact('userSells'));
+	}
+}

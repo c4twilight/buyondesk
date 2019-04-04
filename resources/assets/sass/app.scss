@@ -1,0 +1,45 @@
+
+// // Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// // Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+//because of navbar
+body{
+	margin-top: 100px;
+	background: url('/image/pattern.png');
+}
+
+.row{
+	// width: 100%;
+}
+
+.modal-header h2,h1{
+	display: inline;
+}
+@media ( max-width: 400px){
+	.remove{
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 5px;
+		font-size: 5px;
+	}
+
+	.modal-header h2{
+		font-size: 1em;
+	}
+
+}
+
+.modal {
+  overflow-y:auto;
+}
+
+.no_items{
+	font: 1.5em 'Abel', sans-serif;
+}

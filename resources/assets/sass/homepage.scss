@@ -1,0 +1,94 @@
+	body{
+		background-image: url('/image/bkground.jpeg');
+		background-size:     cover;                      /* <------ */
+		background-repeat:   no-repeat;
+		background-position: center center;
+	}
+
+	.main{
+		margin-top: 150px;
+		margin-bottom: 70px;
+		text-align: center;
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+	.button{
+		padding: 10px;
+		letter-spacing: 6px;
+		width: 30%;
+		font-weight: 900;
+		transition: .2s ease-out;
+		background: none;
+		border: 0.09em solid rgb(20, 208, 20);
+		color: rgb(120, 256, 120);
+		font-size: 1.2em;
+		// color: #fff;
+	}
+
+	.button:hover{
+		background: rgb(60, 188, 60);
+		color: #fff;
+	}
+
+	.about{
+		margin-top: 150px;
+		text-align: center;
+	}
+
+	.panel-heading{
+		background: rgb(60, 188, 60);
+		color: #fff;
+	}
+
+	.panel{
+		border: 1px solid #2AB27B;
+	}
+
+	.about{
+	    // width: 60%;
+	    margin: 30px auto;
+	    font: 1.2em 'Abel', sans-serif;
+	    text-indent: center;
+	    line-height: 1.5em;
+	    word-spacing: 7px;
+	}
+
+	.panel-title{
+		font-size: 1.2em;
+	}
+
+	@media (max-width: 952px){
+		.about{
+			font-size: 1.2em;
+			width: 80%;
+		    text-align: center;
+		}
+	}
+
+	@media (max-width: 700px){
+		.about{
+			width: 100%;
+			font-size: 1em;
+		}
+	}
+	@media ( max-width: 400px){
+		.remove{
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 5px;
+			font-size: 5px;
+		}
+
+		.about{
+			width: 100%;
+			line-height: 1.2em;
+		}
+
+		.button{
+			font-size: 0.9em;
+		}
+
+	}

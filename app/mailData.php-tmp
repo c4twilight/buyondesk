@@ -1,0 +1,52 @@
+<?php
+
+namespace App;
+
+use App\mailData;
+use App\Mail\contactinformation;
+use App\User;
+use Illuminate\Database\Eloquent\Model;
+
+class mailData extends Model {
+	protected $guarded = [];
+
+	public static function contact($id) {
+		$seller      = User::find($id->user_id);
+		$contact_no  = request()->contact_no;
+		$seller_name = User::find($id->user_id)->name;
+		$user_name   = auth()->user()->name;
+
+		mailData::create([
+				'user_id'    => auth()->user()->id,
+				'seller_id'  => User::find($id->user_id)->id,
+				'contact_no' => request()->contact_no,
+				'message'    => null,
+			]);
+
+		if (isset($contact_no)) {
+			\Mail::to($seller)->send(new contactinformation([$seller_name, $user_name, $contact_no]));
+			return redirect()->back()->with('success', 'done');
+		}
+	}
+
+	public static function message($id) {
+		$seller      = User::find($id->user_id);
+		$message     = request()->message;
+		$contact_no  = null;
+		$seller_name = User::find($id->user_id)->name;
+		$user_name   = auth()->user()->name;
+
+		mailData::create([
+				'user_id'    => auth()->user()->id,
+				'seller_id'  => User::find($id->user_id)->id,
+				'contact_no' => null,
+				'message'    => request()->message,
+			]);
+
+		if (isset($message)) {
+			\Mail::to($seller)->send(new contactinformation([$seller_name, $user_name, $contact_no, $message]));
+			return redirect()->back()->with('success', 'done');
+		}
+	}
+
+}

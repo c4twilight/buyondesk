@@ -1,0 +1,62 @@
+<?php
+
+namespace App\Http\Requests;
+
+use App\sell;
+use Illuminate\Foundation\Http\FormRequest;
+use Image;
+
+class NewSellRequest extends FormRequest {
+	/**
+	 * Determine if the user is authorized to make this request.
+	 *
+	 * @return bool
+	 */
+	public function authorize() {
+		return true;
+	}
+
+	/**
+	 * Get the validation rules that apply to the request.
+	 *
+	 * @return array
+	 */
+	public function rules() {
+		return [
+			'price'       => 'required',
+			'title'       => 'required',
+			'discription' => 'required',
+			'condition'   => 'required',
+			'type'        => 'required',
+			'degree_name' => 'required',
+			'image_1'     => 'required',
+		];
+	}
+
+	public function persist() {
+		if ($this->hasFile('image_1')) {
+			$image_1    = $this->file('image_1');
+			$filename_1 = time().'_1.'.$image_1->getClientOriginalExtension();
+			Image::make($image_1)->resize(400, 400)->save(public_path('storage/image/'.$filename_1));
+		}
+
+		if ($this->hasFile('image_2')) {
+			$image_2    = $this->file('image_2');
+			$filename_2 = time().'_2.'.$image_2->getClientOriginalExtension();
+			Image::make($image_2)->resize(400, 400)->save(public_path('storage/image/'.$filename_2));
+		}
+
+		sell::create([
+				'user_id'     => auth()->user()->id,
+				'price'       => $this->price,
+				'title'       => $this->title,
+				'discription' => $this->discription,
+				'condition'   => $this->condition,
+				'type'        => $this->type,
+				'degree_name' => $this->degree_name,
+				'author'      => $this->author,
+				'image_1'     => $filename_1,
+				'image_2'     => isset($filename_2)?$filename_2:null,
+			]);
+	}
+}
